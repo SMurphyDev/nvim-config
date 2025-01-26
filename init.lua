@@ -37,3 +37,6 @@ vim.cmd("filetype plugin indent on")                 -- Indentation enabled base
 -- Mouse behaviour
 vim.opt.mouse                  = "v"                 -- Middle click mouse paste
 vim.opt.mouse                  = "a"                 -- Enable mouse left click
+
+-- Install and use Lazy for plugin management
+require("config.lazy")
