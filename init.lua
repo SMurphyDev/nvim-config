@@ -1,4 +1,4 @@
--- -------------------------------------------
+--- -------------------------------------------
 -- Neo-vim config
 -- -------------------------------------------
 
@@ -16,7 +16,8 @@ vim.opt.incsearch              = true                -- Incremental search
 
 -- UI behaviour
 vim.opt.number                 = true                -- Enable line numbers
---vim.opt.termguicolors          = true                -- Enable 24 bit terminal colours
+vim.opt.background             = "dark"              -- Force the use of a dark background colour
+vim.opt.termguicolors          = true                -- Enable 24 bit terminal colours
 vim.opt.wildmode               = "longest,list"      -- Bash like tab completions
 vim.opt.cc                     = "120"               -- 120 character column border
 vim.opt.cursorline             = true                -- highlight current cursor line
@@ -40,3 +41,4 @@ vim.opt.mouse                  = "a"                 -- Enable mouse left click
 
 -- Install and use Lazy for plugin management
 require("config.lazy")
+require("config.keymaps")
