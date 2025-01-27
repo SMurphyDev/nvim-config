@@ -9,8 +9,8 @@ find this useful as a starting out point for developing your own config.
 
 Install each of these by following their respective install instructions.
 
-1.[Nerd Fonts](https://www.nerdfonts.com/) - Needed so that icons display correctly
-2.[Lazy](https://github.com/folke/lazy.nvim) - Plugin mangager
+1. [Nerd Fonts](https://www.nerdfonts.com/) - Needed so that icons display correctly
+2. [Lazy](https://github.com/folke/lazy.nvim) - Plugin mangager
 
 ## installation
 
@@ -52,4 +52,4 @@ with it until it suits your needs.
 12. [williamboman/mason-lspconfig]("https://github.com/williamboman/mason-lspconfig") - automates lsp installation
 13. [neovim/nvim-lspconfig]("https://github.com/neovim/nvim-lspconfig") - helper mopdule for lsp configuration
 14. [hrsh7th/nvim-cmp]("https://github.com/hrsh7th/nvim-cmp") - Code completion with lsp integration
-15. [stevearc/conform.nvim"]("https://github.com/stevearc/conform.nvim") - Code formating
+15. [stevearc/conform.nvim]("https://github.com/stevearc/conform.nvim") - Code formating
