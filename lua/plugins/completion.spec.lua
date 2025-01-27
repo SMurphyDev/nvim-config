@@ -17,11 +17,10 @@
 
     config = function()
         local cmp = require("cmp")
-        local lspkind = require("lspkind")
         local luasnip = require("luasnip")
 
         require("luasnip.loaders.from_vscode").lazy_load()
- 
+
         cmp.setup({
             snippet = {
                 expand = function(args)
@@ -45,7 +44,7 @@
                 { name = "path" },
             }),
         })
- 
+
         vim.cmd([[
             set completeopt=menuone,noinsert,noselect
             highlight! default link CmpItemKind CmpItemMenuDefault

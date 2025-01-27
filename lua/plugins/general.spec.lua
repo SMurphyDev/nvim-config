@@ -1,8 +1,7 @@
 return {
-    
     -- Generic package config for packages which require very little configuration.
     -- Place more complex configuration set ups in their on spec files.
-    
+
     -- Configure a color scheme
     {
         "https://github.com/neanias/everforest-nvim.git",
@@ -12,7 +11,7 @@ return {
             vim.cmd("colorscheme everforest")
         end
     },
-   
+
     -- Set up oil file manager
     {
         "https://github.com/stevearc/oil.nvim.git",
@@ -29,7 +28,7 @@ return {
     {
         "https://github.com/windwp/nvim-autopairs.git",
         event = "InsertEnter",
-        opts = { 
+        opts = {
             check_ts = true,
             disable_fileypes = {"TelescopePrompt", "vim"}
         },
@@ -41,6 +40,7 @@ return {
         opts = {"*"}
     },
 
+    -- Nicer status line
     {
         "nvim-lualine/lualine.nvim",
         dependencies = { "https://github.com/nvim-tree/nvim-web-devicons.git" },
@@ -81,7 +81,7 @@ return {
         }
     },
 
-    -- Search suggestions for the command bar
+    -- Search suggestions for the command bar_size
     {
         "https://github.com/gelguy/wilder.nvim.git",
         lazy = false,

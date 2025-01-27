@@ -25,12 +25,13 @@ return {
     },
     config = function()
         vim.keymap.set({ "n", "v" }, "<leader>f", function()
+            local conform = require("conform")
             conform.format({
                 lsp_fallback = true,
                 async = false,
                 timeout_ms = 1000,
             })
-        end, 
+        end,
         {desc = "Format file or range (in visual mode)" })
     end,
 }
