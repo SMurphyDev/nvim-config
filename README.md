@@ -38,18 +38,18 @@ with it until it suits your needs.
 
 ### Neo vim plugins
 
-1.  [neanias/everforest-nvim]("https://github.com/neanias/everforest-nvim") - a nice green theme
-2.  [stevearc/oil.nvim]("https://github.com/stevearc/oil.nvim") - a neat buffer based file manager
-3.  [windwp/nvim-autopairs]("https://github.com/windwp/nvim-autopairs") - pair matching for brackets, strings, etc.
-4.  [norcalli/nvim-colorizer.lua]("https://github.com/norcalli/nvim-colorizer.lua") - text highlighter
-5.  [nvim-lualine/lualine.nvim]("https://github.com/nvim-lualine/lualine.nvim") - a nicer status line
+1.  [neanias/everforest-nvim](https://github.com/neanias/everforest-nvim) - a nice green theme
+2.  [stevearc/oil.nvim](https://github.com/stevearc/oil.nvim) - a neat buffer based file manager
+3.  [windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs) - pair matching for brackets, strings, etc.
+4.  [norcalli/nvim-colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua) - text highlighter
+5.  [nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) - a nicer status line
 6.  [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) - fuzzy searching
-7.  [akinsho/toggleterm.nvim]("https://github.com/akinsho/toggleterm.nvim") - integrated pop up terminals
-8.  [gelguy/wilder.nvim]("https://github.com/gelguy/wilder.nvim") - search suggextions for the status line
-9.  [nvim-treesitter/nvim-treesitter]("https://github.com/nvim-treesitter/nvim-treesitter") - treesitter makes the editor more language aware
-10. [williamboman/mason.nvim]("https://github.com/williamboman/mason.nvim") - manages external packages such as lsps and linters
-11. [WhoIsSethDaniel/mason-tool-installer.nvim]("https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim") - specific plugin for installing external tools. These are required to provide functionality to certain langauge servers.
-12. [williamboman/mason-lspconfig]("https://github.com/williamboman/mason-lspconfig") - automates lsp installation
-13. [neovim/nvim-lspconfig]("https://github.com/neovim/nvim-lspconfig") - helper mopdule for lsp configuration
-14. [hrsh7th/nvim-cmp]("https://github.com/hrsh7th/nvim-cmp") - Code completion with lsp integration
-15. [stevearc/conform.nvim]("https://github.com/stevearc/conform.nvim") - Code formating
+7.  [akinsho/toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) - integrated pop up terminals
+8.  [gelguy/wilder.nvim](https://github.com/gelguy/wilder.nvim) - search suggextions for the status line
+9.  [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - treesitter makes the editor more language aware
+10. [williamboman/mason.nvim](https://github.com/williamboman/mason.nvim) - manages external packages such as lsps and linters
+11. [WhoIsSethDaniel/mason-tool-installer.nvim](https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim) - specific plugin for installing external tools. These are required to provide functionality to certain langauge servers.
+12. [williamboman/mason-lspconfig](https://github.com/williamboman/mason-lspconfig) - automates lsp installation
+13. [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - helper mopdule for lsp configuration
+14. [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp) - Code completion with lsp integration
+15. [stevearc/conform.nvim](https://github.com/stevearc/conform.nvim) - Code formating
