@@ -77,7 +77,7 @@ On linux/mac clone to: ~/.config/nvim/
 On windows clone to: %AppData%\Local\nvim\
 
 ```
-git clone https://github.com/SMurphyDev/nvim-config.git
+git clone https://github.com/SMurphyDev/nvim-config.git .
 nvim init.lua
 ```
 
