@@ -10,15 +10,80 @@ find this useful as a starting out point for developing your own config.
 Install each of these by following their respective install instructions.
 
 1. [Nerd Fonts](https://www.nerdfonts.com/) - Needed so that icons display correctly
-2. [Lazy](https://github.com/folke/lazy.nvim) - Plugin mangager
+2. [python](https://www.python.org/) - Some plugins, like wilder assume python is installed and will fail to load if its not
+3. [node](https://nodejs.org/en/download) - sqlls language server is a node package. If you don't need it update lsp.spec.config to remove it.
+
+Note, on windows don't install python from the windows store, use choco or download it from the python website directly.
+There's sometimes an issue where the executable won't be detectable by nvim due to the weird path and naming scheme of
+store installed applications.
+
+### Mac
+
+We need to install dev tools if you haven't already. Some of the plugins automatically installed will require a c
+compiler and build chain to install. Run the following in your command line:
+
+```
+xcode-select install
+```
+
+
+### Linux
+
+As with on mac, some of the plugins require make and a c compiler to build and install, so we need to install build
+essentials. We also need to install unzip, if it's not present stylua will fail to install.
+
+Most distros have an outdated version of neovim in the repo. Ubuntu is still on version 0.6! You'll need to install
+from the experimental repo. I provide instructions for ubuntu/debian like distros here, You'll have to adapt these
+instructions if you are using a different distro.
+
+For ubuntu/mint/debian:
+
+```
+# Install neovim latest version
+sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo apt-get update
+sudo apt-get install neovim
+
+# Install build tools
+sudo apt-get install build-essential
+
+# Install unzip
+sudo apt-get install unzip
+
+```
+
+### Windows
+
+We'll need to install chocolately so that we can pull in dev tools to get all of our plugins to work.
+[choco](https://chocolatey.org/install#individual)
+
+I recommend disabling app execution aliases for python. Windows extremely inistent on routing you to the store otherwise
+:even if you already have python installed by another means already. See [here](https://stackoverflow.com/questions/58754860/cmd-opens-windows-store-when-i-type-python) for  how.
+
+In powershell runng as admin after installing chocolatey:
+
+```
+choco install make
+choco install mingw 
+```
 
 ## installation
 
-Once you have your chose nerd font installed you should only need to clone this to your nvim config directory.
-config/lazy.lua bootstraps the package manager which in turn should install everything else once you run nvim. 
+Once you have your chosen nerd font installed you should only need to clone this to your nvim config directory.
+config/lazy.lua bootstraps the package manager which in turn should install everything else once you run nvim.
 
-On linux/mac clone to: ~/.config/nvim/ 
+On linux/mac clone to: ~/.config/nvim/
+
 On windows clone to: %AppData%\Local\nvim\
+
+```
+git clone https://github.com/SMurphyDev/nvim-config.git
+nvim init.lua
+```
+
+At this point you should have an open nvim instance with all packages listed below installed. You can play around with
+the config files, each time you re-launch nvim your changes should be applied and any new plugins will be isntalled.
+You may need to periodically run MasonClean to uninstall unused lsp or tools.
 
 ## What will be installed?
 
