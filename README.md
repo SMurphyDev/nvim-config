@@ -58,7 +58,7 @@ We'll need to install chocolately so that we can pull in dev tools to get all of
 [choco](https://chocolatey.org/install#individual)
 
 I recommend disabling app execution aliases for python. Windows extremely insistent on routing you to the store otherwise
-:even if you already have python installed by another means already. See [here](https://stackoverflow.com/questions/58754860/cmd-opens-windows-store-when-i-type-python) for  how.
+even if you already have python installed by another means already. See [here](https://stackoverflow.com/questions/58754860/cmd-opens-windows-store-when-i-type-python) for  how.
 
 In powershell runng as admin after installing chocolatey:
 
