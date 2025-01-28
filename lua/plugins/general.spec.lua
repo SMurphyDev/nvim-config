@@ -7,6 +7,9 @@ return {
         "https://github.com/neanias/everforest-nvim.git",
         lazy = false,
         priority = 1000,
+        opt = {
+            background = "hard",
+        },
         config = function()
             vim.cmd("colorscheme everforest")
         end
