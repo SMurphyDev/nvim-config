@@ -1,12 +1,11 @@
 -- Define general key maps that aren't covered in our packages
 vim.g.mapleader = " "
 
-keymap = vim.keymap
+local keymap = vim.keymap
 
 local function map(mode, lhs, rhs)
-    vim.keymap.set(mode, lhs, rhs, { silent = true })
+	vim.keymap.set(mode, lhs, rhs, { silent = true })
 end
-
 
 -- Save
 map("n", "<leader>w", "<CMD>update<CR>")
@@ -39,3 +38,13 @@ keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Fuzzy fi
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find string in cwd" })
 keymap.set("n", "<leader>fs", "<cmd>Telescope git_status<cr>", { desc = "Find string under cursor in cwd" })
 keymap.set("n", "<leader>fc", "<cmd>Telescope git commits<cr>", { desc = "Find todos" })
+
+-- Set keymap for conform code formatting
+local conform = require("conform")
+vim.keymap.set({ "n", "v" }, "<leader>f", function()
+	conform.format({
+		lsp_fallback = true,
+		async = false,
+		timeout_ms = 3000,
+	})
+end, { desc = "Format file or range (in visual mode)" })
