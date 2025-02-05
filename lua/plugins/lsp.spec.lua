@@ -24,19 +24,6 @@ return {
 		},
 	},
 
-	-- Install debuggers
-	{
-		"https://github.com/jay-babu/mason-nvim-dap.nvim.git",
-		opts = {
-			automatic_installation = true,
-			ensure_installed = {
-				"python",
-				"javadbg",
-				"javatest",
-			},
-		},
-	},
-
 	-- Mason specific lsp config. Here's where we automatically install our lsps
 	{
 		"https://github.com/williamboman/mason-lspconfig.nvim",
