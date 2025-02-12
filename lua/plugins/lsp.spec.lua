@@ -118,6 +118,15 @@ return {
 			nvim_lsp.pyright.setup({
 				on_attach = on_attach,
 				capabilities = capabilities,
+				settings = {
+					python = {
+						analysis = {
+							typeCheckingMode = "strict",
+							useLibraryCodeForTypes = true,
+						},
+						pythonPath = "./venv/bin/python3",
+					},
+				},
 			})
 
 			-- Bash language server
