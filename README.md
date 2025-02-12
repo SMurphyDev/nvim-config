@@ -1,6 +1,6 @@
 # Neovim config using Lazy package mangager and Mason
 
-This is my work in progress neovim config, put this together over as a weekend project, so use at your own risk! It's 
+This is my work in progress neovim config, put this together over as a weekend project, so use at your own risk! It's
 set up to use Lazy for configuration and plugin mangement, with Mason for language server installation and
 configuration, in addition to a handful of other quality of life packages for fuzzy search and tooltips etc. You might
 find this useful as a starting out point for developing your own config.
@@ -25,7 +25,6 @@ compiler and build chain to install. Run the following in your command line:
 ```
 xcode-select install
 ```
-
 
 ### Linux
 
@@ -58,13 +57,13 @@ We'll need to install chocolately so that we can pull in dev tools to get all of
 [choco](https://chocolatey.org/install#individual)
 
 I recommend disabling app execution aliases for python. Windows extremely insistent on routing you to the store otherwise
-even if you already have python installed by another means already. See [here](https://stackoverflow.com/questions/58754860/cmd-opens-windows-store-when-i-type-python) for  how.
+even if you already have python installed by another means already. See [here](https://stackoverflow.com/questions/58754860/cmd-opens-windows-store-when-i-type-python) for how.
 
 In powershell runng as admin after installing chocolatey:
 
 ```
 choco install make
-choco install mingw 
+choco install mingw
 ```
 
 ## installation
@@ -118,3 +117,5 @@ with it until it suits your needs.
 13. [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - helper mopdule for lsp configuration
 14. [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp) - Code completion with lsp integration
 15. [stevearc/conform.nvim](https://github.com/stevearc/conform.nvim) - Code formating
+16. [mfussenegger/nvim-dap](https://github.com/mfussenegger/nvim-dap.git) - Debug adapter
+17. [mfussenegger/nvim-dap-python](https://github.com/mfussenegger/nvim-dap-python.git)
