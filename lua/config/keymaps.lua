@@ -3,34 +3,24 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
-local function map(mode, lhs, rhs)
-	vim.keymap.set(mode, lhs, rhs, { silent = true })
-end
-
 -- Save
-map("n", "<leader>w", "<CMD>update<CR>")
+keymap.set("n", "<leader>w", "<CMD>update<CR>", { silent = true, desc = "Save" })
 
 -- Quit
-map("n", "<leader>q", "<CMD>q<CR>")
+keymap.set("n", "<leader>q", "<CMD>q<CR>", { silent = true, desc = "Quit" })
 
 -- Exit insert mode
-map("i", "jk", "<ESC>")
+keymap.set("i", "jk", "<ESC>", { silent = true, desc = "Exit insert mode" })
 
 -- New Windows
-map("n", "<leader>o", "<CMD>vsplit<CR>")
-map("n", "<leader>p", "<CMD>split<CR>")
+keymap.set("n", "<leader>o", "<CMD>vsplit<CR>", { silent = true, desc = "Vertical window split" })
+keymap.set("n", "<leader>p", "<CMD>split<CR>", { silent = true, desc = "Horizontal window split" })
 
 -- Window Navigation
-map("n", "<C-h>", "<C-w>h")
-map("n", "<C-l>", "<C-w>l")
-map("n", "<C-k>", "<C-w>k")
-map("n", "<C-j>", "<C-w>j")
-
--- Resize Windows
-map("n", "<C-Left>", "<C-w><")
-map("n", "<C-Right>", "<C-w>>")
-map("n", "<C-Up>", "<C-w>+")
-map("n", "<C-Down>", "<C-w>-")
+keymap.set("n", "<C-h>", "<C-w>h", { silent = true, desc = "Move to left window" })
+keymap.set("n", "<C-l>", "<C-w>l", { silent = true, desc = "Move to right window" })
+keymap.set("n", "<C-k>", "<C-w>k", { silent = true, desc = "Move to window above" })
+keymap.set("n", "<C-j>", "<C-w>j", { silent = true, desc = "Move to window below" })
 
 -- Telescope keys
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
@@ -100,3 +90,24 @@ end, { desc = "Terminate" })
 keymap.set("n", "<leader>du", function()
 	dapui.toggle()
 end, { desc = "Dap UI Toggle" })
+
+-- Code completion key maps
+local cmp = require("cmp")
+keymap.set("i", "<C-d>", function()
+	cmp.mapping.scroll_docs(-4)
+end, { desc = "Scroll docs backwards" })
+keymap.set("i", "<C-f>", function()
+	cmp.mapping.scroll_docs(4)
+end, { desc = "Scroll docs forewards" })
+keymap.set("i", "<C-Space>", function()
+	cmp.mapping.complete()
+end, { desc = "Code complete" })
+keymap.set("i", "<C-e>", function()
+	cmp.mapping.close()
+end, { desc = "Close completion" })
+keymap.set("i", "<CR>", function()
+	cmp.mapping.confirm({
+		behavior = cmp.ConfirmBehavior.Replace,
+		select = true,
+	})
+end, { desc = "Select completion option" })
