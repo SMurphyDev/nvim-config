@@ -111,3 +111,9 @@ keymap.set("i", "<CR>", function()
 		select = true,
 	})
 end, { desc = "Select completion option" })
+
+-- Toggle button for lazy git terminal
+local terms = require("config.terms")
+keymap.set("n", "<F6>", function()
+	terms.toggle_lazygit()
+end, { desc = "Toggle lazygit", noremap = true, silent = true })
